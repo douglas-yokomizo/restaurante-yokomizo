@@ -13,7 +13,7 @@ interface ItemProps {
 
 const ItemDetails = ({ item: { picture, title } }: ItemProps) => (
     <div>
-        <Image src={picture} alt={title} className='rounded-2xl' />
+        <Image src={picture} alt={title} className='rounded-2xl border-2 border-blue-950 ' />
         <h3 className='font-semibold text-center text-xl my-4'>{title}</h3>
     </div>
 )
@@ -27,10 +27,10 @@ const ItemFooter = ({ item: { price } }: ItemProps) => (
 
 export const Item = ({ item }: ItemProps) => {
     return (
-        <div className='border-2 p-4 border-amber-500 rounded-3xl flex flex-col justify-between bg-yellow-50'>
+        <div className='w-3/4 lg:w-full m-auto border-2 p-4 border-blue-950 rounded-3xl flex flex-col justify-between bg-[#ffecc9]'>
             <ItemDetails item={item} />
             <ItemFooter item={item} />
-            <input type="submit" value='Adicionar ao carrinho' className="cursor-pointer border-2 font-medium border-orange-300 rounded-full self-center py-2 px-4 hover:bg-orange-400 hover:text-white transition-[500] mt-10" />
+            <button type='submit' className="cursor-pointer border-2 font-medium border-blue-950 rounded-full self-center py-2 px-4 hover:bg-orange-500 hover:text-white hover:scale-110 transition-[500] mt-10">Adicionar ao carrinho</button>
         </div>
     )
 }

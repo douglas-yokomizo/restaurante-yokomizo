@@ -1,38 +1,35 @@
 'use client'
 import { ItemList } from "../ItemList"
-import temakiPic from '@/assets/images/temaki.jpg'
+import combinadoPic from '@/assets/images/Combinado.jpeg'
+import katsudonPic from '@/assets/images/Katsudon.jpeg'
+import sashimiPic from '@/assets/images/sashimis.jpeg'
+import ramenPic from '@/assets/images/ramen.jpeg'
 
 const products = [
     {
         id: 1,
-        title: 'Temaki Especial',
-        price: 24,
-        picture: temakiPic
+        title: 'Combinado Especial',
+        price: 150,
+        picture: combinadoPic
     },
     {
         id: 2,
-        title: 'Temaki de Salmão',
-        price: 24,
-        picture: temakiPic
+        title: 'Katsudon',
+        price: 50,
+        picture: katsudonPic
     },
     {
         id: 3,
-        title: 'Temaki Califórnia',
-        price: 24,
-        picture: temakiPic
+        title: 'Sushis & Sashimis',
+        price: 120,
+        picture: sashimiPic
     },
     {
-        id: 3,
-        title: 'Temaki Califórnia',
-        price: 24,
-        picture: temakiPic
-    },
-    {
-        id: 3,
-        title: 'Temaki Califórnia',
-        price: 24,
-        picture: temakiPic
-    },
+        id: 4,
+        title: 'Shoyu Ramen',
+        price: 60,
+        picture: ramenPic
+    }
 ]
 
 export const ListContainer = () => {
