@@ -4,6 +4,8 @@ import combinadoPic from '@/assets/images/Combinado.jpeg'
 import katsudonPic from '@/assets/images/Katsudon.jpeg'
 import sashimiPic from '@/assets/images/sashimis.jpeg'
 import ramenPic from '@/assets/images/ramen.jpeg'
+import { useState } from "react"
+import { useEffect } from "react"
 
 const products = [
     {
@@ -33,10 +35,16 @@ const products = [
 ]
 
 export const ListContainer = () => {
+    const [items, setItems] = useState([])
+    useEffect(() => {
+        setTimeout(() => {
+            setItems(products);
+        }, 2000); // delay de 2 segundos
+    }, []);
 
     return (
         <div>
-            <ItemList items={products} />
+            <ItemList items={items} />
         </div>
 
     )
