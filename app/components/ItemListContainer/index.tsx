@@ -1,13 +1,21 @@
 'use client'
+import { useState } from "react"
+import { useEffect } from "react"
+import { StaticImageData } from "next/image"
 import { ItemList } from "../ItemList"
 import combinadoPic from '@/assets/images/Combinado.jpeg'
 import katsudonPic from '@/assets/images/Katsudon.jpeg'
 import sashimiPic from '@/assets/images/sashimis.jpeg'
 import ramenPic from '@/assets/images/ramen.jpeg'
-import { useState } from "react"
-import { useEffect } from "react"
 
-const products = [
+interface ProductsProps {
+    id: number
+    title: string
+    price: number
+    picture: StaticImageData
+}
+
+const products: ProductsProps[] = [
     {
         id: 1,
         title: 'Combinado Especial',
@@ -35,11 +43,11 @@ const products = [
 ]
 
 export const ListContainer = () => {
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState<ProductsProps[]>([])
     useEffect(() => {
         setTimeout(() => {
             setItems(products);
-        }, 2000); // delay de 2 segundos
+        }, 500); // delay de 0,5 segundos
     }, []);
 
     return (

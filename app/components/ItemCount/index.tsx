@@ -6,7 +6,7 @@ interface IStock {
 }
 
 export const ItemCount = ({ stock }: IStock) => {
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(0)
     return (
         <>
             <div className="flex justify-between items-center">
