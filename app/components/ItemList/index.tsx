@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImageData } from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCards, Navigation } from 'swiper/modules'
+import { Navigation } from 'swiper/modules'
 import { Item } from '../Item'
 import 'swiper/swiper-bundle.css'
 

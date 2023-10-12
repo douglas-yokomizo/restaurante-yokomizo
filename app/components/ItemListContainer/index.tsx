@@ -3,10 +3,14 @@ import { useState } from "react"
 import { useEffect } from "react"
 import { StaticImageData } from "next/image"
 import { ItemList } from "../ItemList"
-import combinadoPic from '@/assets/images/Combinado.jpeg'
-import katsudonPic from '@/assets/images/Katsudon.jpeg'
-import sashimiPic from '@/assets/images/sashimis.jpeg'
-import ramenPic from '@/assets/images/ramen.jpeg'
+import combinadoPic from '@/assets/images/Menu/Combinado.jpeg'
+import katsudonPic from '@/assets/images/Menu/Katsudon.jpeg'
+import sashimiPic from '@/assets/images/Menu/sashimis.jpeg'
+import ramenPic from '@/assets/images/Menu/ramen.jpeg'
+import omuricePic from '@/assets/images/Menu/omurice.jpeg'
+import karaagePic from '@/assets/images/Menu/karaage.jpeg'
+import teishokuPic from '@/assets/images/Menu/teishoku.jpeg'
+import tempuraPic from '@/assets/images/Menu/tempura.jpeg'
 
 interface ProductsProps {
     id: number
@@ -36,33 +40,33 @@ const products: ProductsProps[] = [
     },
     {
         id: 4,
-        title: 'Shoyu Ramen',
+        title: 'Ramen',
         price: 60,
         picture: ramenPic
     },
     {
         id: 5,
-        title: 'Shoyu Ramen',
-        price: 60,
-        picture: ramenPic
+        title: 'Omurice',
+        price: 45,
+        picture: omuricePic
     },
     {
         id: 6,
-        title: 'Shoyu Ramen',
-        price: 60,
-        picture: ramenPic
+        title: 'Karaage de Frango',
+        price: 40,
+        picture: karaagePic
     },
     {
         id: 7,
-        title: 'Shoyu Ramen',
-        price: 60,
-        picture: ramenPic
+        title: 'Teishoku de Anchova',
+        price: 75,
+        picture: teishokuPic
     },
     {
         id: 8,
-        title: 'Shoyu Ramen',
+        title: 'Tempura Variado',
         price: 60,
-        picture: ramenPic
+        picture: tempuraPic
     },
 ]
 
