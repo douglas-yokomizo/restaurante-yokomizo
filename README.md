@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Restaurante Yokz
 
-## Getting Started
+Este é um projeto de um site para um restaurante japonês, construído com Next.js 13 e Tailwind CSS.
 
-First, run the development server:
+## 🚀 Começando
 
+Estas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+
+### 📋 Pré-requisitos
+
+- Node.js
+- Yarn ou npm
+
+### 🔧 Instalação
+
+1. Clone o repositório
 ```bash
-npm run dev
-# or
+git clone https://github.com/douglas-yokomizo/restaurante-yokomizo
+```
+2. Entre no diretório
+```bash
+cd seuprojeto
+```
+3. Instale as dependências
+```bash
+yarn install
+```
+4. Inicie o servidor de desenvolvimento
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Construído com
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Next.js 13](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📦 Funcionalidades
 
-## Learn More
+O site possui as seguintes páginas e funcionalidades:
 
-To learn more about Next.js, take a look at the following resources:
+- **Página inicial**: Uma página de boas-vindas para os visitantes.
+- **Navbar**: Uma barra de navegação com o logotipo do restaurante.
+- **Sobre**: Uma página com informações sobre o restaurante.
+- **Menu**: Uma página mostrando os itens do menu em forma de slide, que os clientes podem pedir.
+- **Contato**: Uma página com informações de contato do restaurante.
+- **Ícone de carrinho**: Os clientes podem adicionar itens ao carrinho para fazer um pedido.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Versão
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1.0.0
 
-## Deploy on Vercel
+## ✒️ Autor
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Douglas Yokomizo - [douglas-yokomizo](https://github.com/douglas-yokomizo)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Espero que isso ajude! Se você tiver mais perguntas, fique à vontade para perguntar.

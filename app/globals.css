@@ -5,6 +5,15 @@
 body {
     width: 100%;
     max-width: 1440px;
+    height: 100vh;
     margin: 0 auto;
-    background-color: #f5f5dc;
+    font-family: var(--font-urbanist);
+    background: url('../assets/images/HeroImg.png') no-repeat right top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+h1,h2 {
+    font-family: var(--font-fuggles);
 }

@@ -1,19 +1,26 @@
 'use client'
-import { Logo } from "../components/Logo"
+import Link from "next/link"
+import { Fuggles } from "next/font/google"
+import { usePathname } from "next/navigation"
 import { Cart } from "../components/CartWidget"
+import { Logo } from "../components/Logo"
 
+const fuggles = Fuggles({ weight: ['400'], subsets: ['latin'] })
 const NavBar = () => {
+    const pathname = usePathname();
 
     return (
-        <nav className="lg:flex items-center justify-between px-4 py-6 my-5 border-b-2 border-b-blue-950">
+        <nav className="lg:flex items-center justify-between px-4 py-6 my-5">
             <Logo />
-            <ul className="flex gap-12 ml-96">
-                <a className="hover:ease-in-out hover:scale-110 duration-300 transition hover:text-orange-500" href="/About">Sobre</a>
-                <a className="hover:ease-in-out hover:scale-110 duration-300 transition hover:text-orange-500" href="#">Menu</a>
-                <a className="hover:ease-in-out hover:scale-110 duration-300 transition hover:text-orange-500" href="#">Delivery</a>
-                <a className="hover:ease-in-out hover:scale-110 duration-300 transition hover:text-orange-500" href="#">Contato</a>
-            </ul>
-            <Cart />
+            <div className={fuggles.className}>
+
+                <ul className="flex gap-12 ml-96 items-center">
+                    <Link className="hover:ease-in-out hover:scale-110 text-5xl duration-300 transition hover:text-orange-500" href="/About">Sobre</Link>
+                    <Link className="hover:ease-in-out hover:scale-110 text-5xl duration-300 transition hover:text-orange-500" href="/Menu">Menu</Link>
+                    <Link className="hover:ease-in-out hover:scale-110 text-5xl duration-300 transition hover:text-orange-500" href="Contact">Contato</Link>
+                    {pathname === '/Menu' && <Cart />}
+                </ul>
+            </div>
         </nav>
     )
 }

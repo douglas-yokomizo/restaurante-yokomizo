@@ -1,12 +1,10 @@
-import { ItemDetail } from '@/app/components/ItemDetail'
-import React from 'react'
 
-const ItemDetailsContainer = () => {
+const ItemDetailsContainer = ({ params }: { params: { id: string } }) => {
+
     return (
-        <div>
-            <h1>novo</h1>
-        </div>
+        <p>product: {params.id}</p>
     )
+
 }
 
 export default ItemDetailsContainer

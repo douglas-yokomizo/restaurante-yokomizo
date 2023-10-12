@@ -7,7 +7,7 @@ export const ItemDetail = ({ item }: ItemProps) => {
         <>
             <Image src={item.picture} alt={item.title} />
             <h2>{item.title}</h2>
-            <p>{item.description}</p>
+            <p>item {item.id}</p>
 
         </>
     )

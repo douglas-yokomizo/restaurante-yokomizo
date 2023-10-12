@@ -9,7 +9,6 @@ export interface ItemProps {
         title: string
         price: number
         picture: StaticImageData
-        description: string
     }
 }
 
@@ -22,14 +21,14 @@ const ItemHeader = ({ item: { picture, title } }: ItemProps) => (
 
 const ItemFooter = ({ item: { price } }: ItemProps) => (
     <div className="flex justify-between items-center px-1">
-        <h4 className='text-orange-500 text-lg'>R${price}</h4>
+        <h3 className='text-orange-500 text-lg'>R${price}</h3>
         <ItemCount stock={6} />
     </div>
 )
 
 export const Item = ({ item, item: { id } }: ItemProps) => {
     return (
-        <div className='w-3/4 lg:w-full m-auto border-2 p-4 border-blue-950 rounded-3xl flex flex-col justify-between hover:scale-105 hover:shadow-[0_25px_30px_-15px_rgba(0,0,0,0.3)] transition ease-out bg-[#ffecc9]'>
+        <div className='w-3/4 lg:w-full m-auto border-2 p-4 border-blue-950 rounded-3xl flex flex-col justify-between hover:scale-105 hover:shadow-[0_20px_20px_-15px_rgba(0,0,0,0.3)] transition ease-out bg-[#ffecc9]'>
             <Link href={`/ItemDetailsContainer/${id}`}>
                 <ItemHeader item={item} />
             </Link>
