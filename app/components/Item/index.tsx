@@ -9,6 +9,7 @@ export interface ItemProps {
         title: string
         price: number
         picture: StaticImageData
+        description?: string
     }
 }
 
@@ -22,7 +23,7 @@ const ItemHeader = ({ item: { picture, title } }: ItemProps) => (
 const ItemFooter = ({ item: { price } }: ItemProps) => (
     <div className="flex justify-between items-center px-1">
         <h3 className='text-orange-500 text-lg'>R${price}</h3>
-        <ItemCount stock={6} />
+        <ItemCount />
     </div>
 )
 
@@ -33,7 +34,8 @@ export const Item = ({ item, item: { id } }: ItemProps) => {
                 <ItemHeader item={item} />
             </Link>
             <ItemFooter item={item} />
-            <button type='submit' className="cursor-pointer border-2 font-medium border-blue-950 rounded-full self-center py-2 px-4 hover:bg-orange-500 hover:text-white hover:scale-110 transition-[500] mt-10">Adicionar ao carrinho</button>
+            <button type='submit' className="cursor-pointer border-2 font-medium border-blue-950 rounded-full self-center py-2 px-4 hover:bg-orange-500 hover:text-white hover:scale-110 transition-[500] mt-10">Adicionar ao carrinho
+            </button>
         </div>
     )
 }

@@ -12,7 +12,7 @@ import karaagePic from '@/assets/images/Menu/karaage.jpeg'
 import teishokuPic from '@/assets/images/Menu/teishoku.jpeg'
 import tempuraPic from '@/assets/images/Menu/tempura.jpeg'
 
-interface ProductsProps {
+export interface ProductsProps {
     id: number
     title: string
     price: number

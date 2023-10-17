@@ -34,10 +34,5 @@ export const ItemList = ({ items }: ItemListProps) => {
                 </SwiperSlide>
             ))}
         </Swiper >
-        // <div className="p-14 grid grid-cols-1 lg:w-full w-3/4 lg:grid-cols-4 gap-6 my-8">
-        //     {items.map((item) => (
-        //         <Item key={item.id} item={item} />
-        //     ))}
-        // </div>
     )
 }
