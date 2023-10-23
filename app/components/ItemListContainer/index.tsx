@@ -79,7 +79,7 @@ export const ListContainer = () => {
     }, []);
 
     return (
-        <div>
+        <div >
             <ItemList items={items} />
         </div>
 

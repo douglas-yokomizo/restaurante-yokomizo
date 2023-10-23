@@ -5,7 +5,7 @@ import aboutImg from '@/assets/images/About.jpeg'
 const About = () => {
     return (
         <>
-            <div className='bg-white opacity-90 p-9 rounded-2xl'>
+            <div className='bg-white opacity-95 p-9 rounded-2xl'>
                 <section className='flex items-center justify-between'>
                     <Image src={aboutImg} className='w-1/2 rounded-3xl border-blue-950 border-4' alt='restaurant images'></Image>
                     <article className='w-[40%] flex flex-col justify-between items-start gap-8'>

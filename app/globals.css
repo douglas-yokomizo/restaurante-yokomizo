@@ -8,11 +8,10 @@ body {
     height: 100vh;
     margin: 0 auto;
     font-family: var(--font-urbanist);
-    background: url('../assets/images/HeroImg.png') no-repeat right top;
+    background: url('../assets/images/HeroImg.png') no-repeat top;
     background-size: cover;
     overflow: hidden;
 }
-
 
 h1,h2 {
     font-family: var(--font-fuggles);

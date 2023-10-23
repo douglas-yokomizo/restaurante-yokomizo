@@ -1,13 +1,15 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
+import { useCart } from '@/app/contexts/cartContext'
 import { ItemCount } from '@/app/components/ItemCount'
 import combinadoPic from '@/assets/images/Menu/Combinado.jpeg'
-import Link from 'next/link'
 
 
 const ItemDetail = () => {
     const [itemCount, setItemCount] = useState(0)
+    const { addItem } = useCart()
 
     const handleAddToCart = () => {
         itemCount == 0 ? alert('Adicione itens ao carrinho') : alert(`${itemCount} itens adicionados ao carrinho`)

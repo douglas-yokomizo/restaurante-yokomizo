@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImageData } from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Mousewheel, Scrollbar } from 'swiper/modules'
 import { Item } from '../Item'
 import 'swiper/swiper-bundle.css'
 
@@ -20,7 +20,9 @@ export const ItemList = ({ items }: ItemListProps) => {
     return (
         <Swiper
             navigation={true}
-            modules={[Navigation]}
+            scrollbar={{ draggable: true, hide: true }}
+            mousewheel={{ sensitivity: 5 }}
+            modules={[Mousewheel, Scrollbar, Navigation]}
             slidesPerView={1}
             breakpoints={{
                 640: {

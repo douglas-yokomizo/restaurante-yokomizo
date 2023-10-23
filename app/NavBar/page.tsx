@@ -18,7 +18,7 @@ const NavBar = () => {
                     <Link className="hover:ease-in-out hover:scale-110 text-5xl duration-300 transition hover:text-orange-500" href="/About">Sobre</Link>
                     <Link className="hover:ease-in-out hover:scale-110 text-5xl duration-300 transition hover:text-orange-500" href="/Menu">Menu</Link>
                     <Link className="hover:ease-in-out hover:scale-110 text-5xl duration-300 transition hover:text-orange-500" href="Contact">Contato</Link>
-                    {pathname === '/Menu' || '/ItemDetailsContainer' && <Cart />}
+                    {pathname === '/Menu' || pathname === '/ItemDetailContainer/[]' ? <Cart /> : undefined}
                 </ul>
             </div>
         </nav>

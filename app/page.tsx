@@ -1,9 +1,8 @@
 import Link from "next/link";
-import background from '../assets/images/HeroImg.png'
 
 export default function Home() {
   return (
-    <div style={{ backgroundImage: `url(${background})` }}>
+    <>
       <h3 className="lg:text-6xl w-3/4 font-semibold">
         Um Convite ao Sabor e à Cultura do Japão
       </h3>
@@ -21,6 +20,6 @@ export default function Home() {
           </button>
         </Link>
       </div>
-    </div>
+    </>
   )
 }
