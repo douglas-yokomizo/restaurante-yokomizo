@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Urbanist, Fuggles } from 'next/font/google'
 import { CartProvider } from './contexts/cartContext'
-import NavBar from './NavBar/page'
+import { CounterProvider } from './contexts/counterContext'
+import NavBar from './components/NavBar'
 import './globals.css'
 
 const urbanist = Urbanist({
@@ -16,6 +17,8 @@ const fuggles = Fuggles({
   variable: '--font-fuggles'
 })
 
+
+
 export const metadata: Metadata = {
   title: 'Restaurante Yokz',
   description: 'Restaurante Yokz',
@@ -25,10 +28,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-br" className={`${urbanist.variable} ${fuggles.variable}`}>
       <body>
-        <CartProvider>
-          <NavBar />
-          {children}
-        </CartProvider>
+        <CounterProvider>
+          <CartProvider>
+            <NavBar />
+            {children}
+          </CartProvider>
+        </CounterProvider>
       </body>
     </html >
   )

@@ -2,8 +2,8 @@
 import Link from "next/link"
 import { Fuggles } from "next/font/google"
 import { usePathname } from "next/navigation"
-import { Cart } from "../components/CartWidget"
-import { Logo } from "../components/Logo"
+import { Cart } from "../CartWidget"
+import { Logo } from "../Logo"
 
 const fuggles = Fuggles({ weight: ['400'], subsets: ['latin'] })
 const NavBar = () => {
