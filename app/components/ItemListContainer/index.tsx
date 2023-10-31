@@ -14,13 +14,14 @@ export const ListContainer = () => {
     const itemsCollection = collection(db, 'items')
 
     getDocs(itemsCollection).then((res) => {
-      const itemData = res.docs.map((doc) => ({
+      const itemData = res.docs.map<ItemProps>((doc) => ({
         id: doc.id,
         title: doc.data().title,
         price: doc.data().price,
         picture: doc.data().picture,
         description: doc.data().description,
-        stock: doc.data().stock
+        stock: doc.data().stock,
+        quantity: doc.data().quantity
       }));
       setItems(itemData)
     })
@@ -28,9 +29,19 @@ export const ListContainer = () => {
   }, []);
 
   return (
-    <div >
-      <ItemList items={items} />
-    </div>
+    <>
+      <div>
+        <ul className="flex justify-evenly bg-slate-50">
+          <li>Pratos Principais</li>
+          <li>Especiais</li>
+          <li>Entrada</li>
+          <li>Sushis</li>
+        </ul>
+      </div>
+      <div >
+        <ItemList items={items} />
+      </div>
+    </>
 
   )
 }

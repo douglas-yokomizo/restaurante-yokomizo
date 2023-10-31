@@ -4,8 +4,9 @@ export interface ItemProps {
   title: string
   price: number
   picture: string
-  description: string
-  stock: number
+  description?: string
+  stock?: number
+  quantity: number
 }
 
 // aqui a lista recebe items, que é do tipo array de items

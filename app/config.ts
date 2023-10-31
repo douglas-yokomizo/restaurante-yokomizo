@@ -1,16 +1,15 @@
-require('dotenv').config()
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCAZRpzFDH-zxFBOc_2VRshFoD74qdYnNY",
-  authDomain: "restaurante-yokz.firebaseapp.com",
-  projectId: "restaurante-yokz",
-  storageBucket: "restaurante-yokz.appspot.com",
-  messagingSenderId: "82757028993",
-  appId: "1:82757028993:web:6e4a44ce1dd2efb1a4d180",
-  measurementId: "G-NX7NQ013H9"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 let firebase_app = initializeApp(firebaseConfig)

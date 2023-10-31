@@ -1,23 +1,17 @@
 'use client'
 import React, { createContext, useContext, useState } from 'react';
+import { ItemProps } from '../interfaces/Product';
 
 export interface ChildrenProps {
   children: React.ReactNode
 }
 
-interface Item {
-  id: number,
-  name: string,
-  price: number,
-  quantity: number
-}
-
 // os métodos estão mudando o state do carrinho, mas não retornam nada, por isso o retorno é void
 // perceba que eles são todos verbos
 interface ICartContext {
-  cart: Item[]
-  addItem: (item: Item) => void
-  removeItem: (itemId: number) => void
+  cart: ItemProps[]
+  addItem: (item: ItemProps) => void
+  removeItem: (itemId: string) => void
   clearCart: () => void
 }
 
@@ -26,9 +20,9 @@ export const CartContext = createContext<ICartContext>({} as ICartContext)
 
 // no provider vamos criar a lógica que o contexto irá passar para os filhos
 const CartProvider = ({ children }: ChildrenProps) => {
-  const [cart, setCart] = useState<Item[]>([]);
+  const [cart, setCart] = useState<ItemProps[]>([]);
 
-  const addItem = (item: Item) => {
+  const addItem = (item: ItemProps) => {
     // Aqui ele vai identificar se o item que está no carrinho é igual ao que o cliente está tentando adicionar
     const isInCart = cart.find((i) => i.id === item.id)
 
@@ -42,7 +36,7 @@ const CartProvider = ({ children }: ChildrenProps) => {
     }
   }
 
-  const removeItem = (itemId: number) => {
+  const removeItem = (itemId: string) => {
     // aqui vamos retornar apenas o item que for diferente do id do itemId, que é o que vai ser removido
     setCart(cart.filter((item) => item.id !== itemId))
   }
