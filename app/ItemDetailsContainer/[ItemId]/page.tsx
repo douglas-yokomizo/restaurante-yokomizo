@@ -2,13 +2,13 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { firebase_app } from '@/app/config';
 import { doc, getDoc, getFirestore } from 'firebase/firestore'
+import toast from 'react-hot-toast';
+import { firebase_app } from '@/app/config';
 import { ItemCount } from '@/app/components/ItemCount'
 import { ItemProps } from '@/app/interfaces/Product'
 import { useCart } from '@/app/contexts/cartContext';
 import { useCounter } from '@/app/contexts/counterContext';
-import toast from 'react-hot-toast';
 
 const ItemDetail = ({ params }: { params: { ItemId: string } }) => {
 
@@ -77,9 +77,6 @@ const ItemDetail = ({ params }: { params: { ItemId: string } }) => {
 
   return (
     <>
-      <div className='bg-red-500 mb-20'>
-        PRATOS PRINCIPAIS
-      </div>
       <div className='flex items-center gap-10 mt-10 w-2/3 p-5'>
         <Image
           src={product?.picture === undefined ? '/' : product.picture}

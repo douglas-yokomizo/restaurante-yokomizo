@@ -1,15 +1,14 @@
 'use client'
-import React, { ReactNode, useContext } from 'react'
 import Image from 'next/image'
-import { CartContext } from '../contexts/cartContext'
+import { useCart } from '../contexts/cartContext'
 import emptyCart from '@/assets/images/empty-cart.png'
 import Link from 'next/link'
 import toast from 'react-hot-toast'
 
 const Cart = () => {
-  const { cart, clearCart, removeItem } = useContext(CartContext)
+  const { cart, clearCart, removeItem } = useCart()
 
-  const totalValue = cart.reduce((total, cartItem) => total + cartItem.price, 0)
+  const totalItem = cart.reduce((total, cartItem) => total + cartItem.price * cartItem.quantity, 0)
 
   if (cart.length === 0) {
     return (
@@ -86,16 +85,16 @@ const Cart = () => {
           <aside className='bg-slate-50 w-1/4 h-fit mt-[78px] p-5 rounded-xl border-2 border-black'>
             <h3 className='text-2xl border-b-2 pb-2 mb-4'>Resumo do Pedido</h3>
             {cart.map((item) =>
-              <li className='text-gray-500 flex justify-between'>
+              <li key={item.id} className='text-gray-500 flex justify-between'>
                 x{item.quantity} {item.title}
                 <span>
                   R$ {item.quantity * item.price}
                 </span>
               </li>
             )}
-            <div className='flex justify-between text-right border-t-2 my-4 pt-2 font-bold'>
+            <div className='flex justify-between text-lg text-right border-t-2 my-4 pt-2 font-bold'>
               <p>Total do pedido</p>
-              R$ {totalValue}
+              R$ {totalItem}
             </div>
             <Link href={'/Checkout'}>
               <button className='w-full bg-orange-400 font-bold text-white py-4 px-10 rounded-[50px] transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-200'>Confirmar pedido</button>

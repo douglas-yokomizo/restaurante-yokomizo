@@ -73,7 +73,7 @@ export const Item = ({ id, picture, title, price, stock }: ItemProps) => {
       </Link>
       <div className="flex justify-between items-center px-1">
         <h3 className='text-orange-500 text-lg'>
-          R${price}
+          R$ {price}
         </h3>
         <ItemCount id={id} stock={stock} />
       </div>

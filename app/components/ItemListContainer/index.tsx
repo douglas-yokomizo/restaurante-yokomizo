@@ -29,19 +29,6 @@ export const ListContainer = () => {
   }, []);
 
   return (
-    <>
-      <div>
-        <ul className="flex justify-evenly bg-slate-50">
-          <li>Pratos Principais</li>
-          <li>Especiais</li>
-          <li>Entrada</li>
-          <li>Sushis</li>
-        </ul>
-      </div>
-      <div >
-        <ItemList items={items} />
-      </div>
-    </>
-
+    <ItemList items={items} />
   )
 }

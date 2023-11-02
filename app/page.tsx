@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <h3 className="lg:text-6xl w-3/4 font-semibold">
+      <h3 className="lg:text-6xl w-3/4 font-semibold mt-16">
         Um Convite ao Sabor e à Cultura do Japão
       </h3>
       <h4 className="mt-16 mb-20 text-3xl w-2/3">Descubra a diversidade e a sofisticação da culinária japonesa em nosso restaurante, que oferece desde os clássicos sushis e sashimis até as delícias da cozinha quente.
