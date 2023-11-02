@@ -19,6 +19,8 @@ A página detalhe do item fornece informações detalhadas sobre um item especí
  Limpeza de todos os itens do carrinho
  Simulação de compra
 
+ ### [Veja funcionando](https://restaurante-yokz.vercel.app/)
+
 ## Requisitos
 
  Node.js 16.x ou superior
