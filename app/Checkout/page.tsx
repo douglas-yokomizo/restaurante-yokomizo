@@ -13,17 +13,17 @@ const Checkout = () => {
     nome: '',
     sobrenome: '',
     email: '',
+    emailConfirmation: '',
     telefone: ''
   })
   const [orderId, setOrderId] = useState('')
   const totalItem = cart.reduce((total, cartItem) => total + cartItem.price * cartItem.quantity, 0)
-  const itemIds = cart.map(item => item.id)
   const order = {
     buyer: { ...data },
     items: [...cart],
     total: { 'Total da Compra': totalItem }
   }
-  const invalidForm = (data.nome === '' || data.email === '' || data.sobrenome === '' || data.telefone === '')
+  const invalidForm = (data.nome === '' || data.email === '' || data.email !== data.emailConfirmation || data.sobrenome === '' || data.telefone === '')
   const ordersCollection = collection(db, "orders")
 
   const createdOrder = async () => {
@@ -109,6 +109,15 @@ const Checkout = () => {
                 name='email'
                 type="email"
                 onChange={(e) => setData({ ...data, email: e.target.value })}
+                placeholder='joao.silva@exemplo.com' />
+            </label>
+            <label className='flex flex-col'>
+              <strong className='text-slate-950'>Confirmar Email</strong>
+              <input
+                className='bg-inherit font-semibold text-black focus:outline-none border-b-2 focus:border-orange-400 py-2'
+                name='emailConfirmation'
+                type="email"
+                onChange={(e) => setData({ ...data, emailConfirmation: e.target.value })}
                 placeholder='joao.silva@exemplo.com' />
             </label>
             <label className='flex flex-col'>

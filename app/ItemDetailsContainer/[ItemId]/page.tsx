@@ -40,7 +40,7 @@ const ItemDetail = ({ params }: { params: { ItemId: string } }) => {
 
     const id = params.ItemId
 
-    if (counterState[params.ItemId] > 0) {
+    if (counterState[id] > 0) {
       addItem({
         id: id,
         title: product?.title ?? '',
@@ -74,6 +74,7 @@ const ItemDetail = ({ params }: { params: { ItemId: string } }) => {
     }
     delete counterState[params.ItemId]
   }
+
 
   return (
     <>

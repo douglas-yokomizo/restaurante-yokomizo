@@ -5,6 +5,8 @@ import { CartProvider } from './contexts/cartContext'
 import { CounterProvider } from './contexts/counterContext'
 import NavBar from './components/NavBar'
 import './globals.css'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 const urbanist = Urbanist({
   subsets: ['latin'],
@@ -31,7 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CounterProvider>
           <CartProvider>
             <NavBar />
-            {children}
+            <Suspense fallback={<Loading />}>
+              {children}
+            </Suspense>
           </CartProvider>
         </CounterProvider>
       </body>
