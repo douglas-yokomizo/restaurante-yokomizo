@@ -1,9 +1,9 @@
-import { ListContainer } from '../components/ItemListContainer'
+import { ListContainer } from '@/app/components/ItemListContainer'
 
 const Menu = () => {
-    return (
-        <ListContainer />
-    )
+  return (
+    <ListContainer />
+  )
 }
 
 export default Menu
