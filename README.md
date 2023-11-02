@@ -1,6 +1,6 @@
-**# Restaurante Yokz**
+# Restaurante Yokz
 
-**## Descrição**
+## Descrição
 
 O Restaurante Yokz é um projeto de restaurante japonês desenvolvido com Next.js 13, Tailwind, TypeScript e Firebase. O projeto contém 7 páginas: home, sobre, menu, visão do carrinho, checkout, detalhe do item e contato.
 
@@ -12,20 +12,20 @@ A página checkout permite ao usuário concluir a compra. O usuário deve fornec
 
 A página detalhe do item fornece informações detalhadas sobre um item específico do menu. A página contato fornece informações de contato do restaurante.
 
-**## Funcionalidades**
+## Funcionalidades
 
-* Visualização do menu
-* Adição e exclusão de itens do carrinho
-* Limpeza de todos os itens do carrinho
-* Simulação de compra
+ Visualização do menu
+ Adição e exclusão de itens do carrinho
+ Limpeza de todos os itens do carrinho
+ Simulação de compra
 
-**## Requisitos**
+## Requisitos
 
-* Node.js 16.x ou superior
-* Yarn ou npm
-* Firebase
+ Node.js 16.x ou superior
+ Yarn ou npm
+ Firebase
 
-**## Instalação**
+## Instalação
 
 1. Clone o repositório:
 
@@ -41,8 +41,8 @@ yarn install
 
 3. Configure o Firebase:
 
-* Abra o arquivo `.env.local` e insira as chaves do Firebase.
-* Para obter as chaves do Firebase, acesse o console do Firebase e crie um novo projeto.
+ Abra o arquivo `.env.local` e insira as chaves do Firebase.
+ Para obter as chaves do Firebase, acesse o console do Firebase e crie um novo projeto.
 
 4. Inicie o servidor:
 
@@ -50,26 +50,26 @@ yarn install
 yarn dev
 ```
 
-**## Uso**
+## Uso
 
 Abra o navegador em `http://localhost:3000`.
 
-**## Exemplos**
+## Exemplos
 
-* Para visualizar o menu, acesse a página `/menu`.
-* Para adicionar um item ao carrinho, clique no botão "Adicionar ao carrinho".
-* Para excluir um item do carrinho, clique no botão "Excluir".
-* Para limpar todos os itens do carrinho, clique no botão "Limpar".
-* Para simular uma compra, clique no botão "Confirmar Pedido" e preencha as informações de contato.
+ Para visualizar o menu, acesse a página `/menu`.
+ Para adicionar um item ao carrinho, clique no botão "Adicionar ao carrinho".
+ Para excluir um item do carrinho, clique no botão "Excluir".
+ Para limpar todos os itens do carrinho, clique no botão "Limpar".
+ Para simular uma compra, clique no botão "Confirmar Pedido" e preencha as informações de contato.
 
-**## Documentação adicional**
+## Documentação adicional
 
-* Documentação do Next.js: https://nextjs.org/docs/
-* Documentação do Tailwind: https://tailwindcss.com/docs/
-* Documentação do TypeScript: https://www.typescriptlang.org/docs/
-* Documentação do Firebase: https://firebase.google.com/docs/
+ Documentação do Next.js: https://nextjs.org/docs/
+ Documentação do Tailwind: https://tailwindcss.com/docs/
+ Documentação do TypeScript: https://www.typescriptlang.org/docs/
+ Documentação do Firebase: https://firebase.google.com/docs/
 
-**## Contribuições**
+## Contribuições
 
 Contribuições são bem-vindas. Para contribuir, siga estas etapas:
 
@@ -78,6 +78,6 @@ Contribuições são bem-vindas. Para contribuir, siga estas etapas:
 3. Faça as alterações necessárias.
 4. Envie um pull request.
 
-**## Agradecimentos**
+## Agradecimentos
 
-Agradeço à equipe de educadores da CoderHouse, ![Henrique Suel](https://github.com/HenriqueSuel) e ![Luan Bitar](https://github.com/luanbitar), por sua ajuda neste projeto.
+Agradeço à equipe de educadores da CoderHouse, [Henrique Suel](https://github.com/HenriqueSuel) e [Luan Bitar](https://github.com/luanbitar), por sua ajuda neste projeto.
