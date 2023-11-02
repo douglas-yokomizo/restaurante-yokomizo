@@ -80,4 +80,4 @@ Contribuições são bem-vindas. Para contribuir, siga estas etapas:
 
 ## Agradecimentos
 
-Agradeço à equipe de educadores da CoderHouse, ![Henrique Suel](https://github.com/HenriqueSuel) e ![Luan Bitar](https://github.com/luanbitar), por sua ajuda neste projeto.
+Agradeço à equipe de educadores da CoderHouse, [Henrique Suel](https://github.com/HenriqueSuel) e [Luan Bitar](https://github.com/luanbitar), por sua ajuda neste projeto.
